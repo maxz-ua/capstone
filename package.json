@@ -1,16 +1,20 @@
 {
-  "dependencies": {
-    "gh-pages": "^5.0.0",
-    "lodash": "^4.17.21",
-    "minimatch": "^9.0.3"
-  },
-  "scripts": {},
+  "name": "practice-app",
+  "version": "1.0.0",
+  "description": "Calculator",
+  "scripts": {
+    "build": "parcel build src/index.html --public-url /practice-app-location",
+    "start": "parcel src/index.html",
+    "lint": "eslint src/*.js",
+    "test": "jest",
+    "deploy": "npm run build && gh-pages -d dist"
+  }
   "devDependencies": {
-    "@eslint/js": "^9.6.0",
-    "@parcel/transformer-sass": "^2.12.0",
-    "eslint": "^9.6.0",
-    "eslint-config-standard": "^17.1.0",
-    "globals": "^15.6.0",
-    "jest-environment-jsdom": "^29.6.1"
+    "eslint": "^8.35.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "gh-pages": "^5.0.0",
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
+    "parcel-bundler": "^1.12.5",
   }
 }
